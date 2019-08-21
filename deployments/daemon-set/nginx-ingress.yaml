@@ -16,6 +16,14 @@ spec:
        #prometheus.io/port: "9113"
     spec:
       serviceAccountName: nginx-ingress
+      securityContext:
+        allowPrivilageEscalation: false
+        runAsUser: 101 #nginx
+        capabilities:
+          drop:
+          - ALL
+          add:
+          - NET_BIND_SERVICE
       containers:
       - image: nginx/nginx-ingress:edge
         imagePullPolicy: Always
