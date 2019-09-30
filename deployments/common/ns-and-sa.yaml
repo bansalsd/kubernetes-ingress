@@ -4,7 +4,7 @@ metadata:
   name: nginx-ingress 
 ---
 apiVersion: v1
-kind: ServiceAccount
+kind: Service
 metadata:
   name: nginx-ingress 
   namespace: nginx-ingress
