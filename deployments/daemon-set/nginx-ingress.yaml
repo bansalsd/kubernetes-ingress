@@ -15,7 +15,7 @@ spec:
        #prometheus.io/scrape: "true"
        #prometheus.io/port: "9113"
     spec:
-      serviceAccountName: nginx-ingress
+      serviceName: nginx-ingress
       containers:
       - image: nginx/nginx-ingress:edge
         imagePullPolicy: Always
